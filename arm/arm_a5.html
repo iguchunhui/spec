@@ -1,0 +1,2348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的 ARM 登录</title>
+<meta name="Description" content="">
+
+   
+<link rel="stylesheet" type="text/css" href="/styles/arm_generic.css">
+<link rel="stylesheet" type="text/css" href="/styles/arm.css">
+<link media="print" rel="stylesheet" type="text/css" href="/styles/print.css">
+<link rel="stylesheet" type="text/css" href="/styles/global.css">
+ 
+
+
+
+<link rel="stylesheet" type="text/css" href="/styles/login_site.css">
+<script language="JavaScript" type="text/javascript" src="/javascript/generic.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/registration.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/leftNav.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/javascript/jquery.1.7.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/jquery-ui-1.8.17.custom.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/jquery.modal.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/jquery.arm.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/javascript/tabcontent.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/globalInit.js"></script>
+
+<!-- Adobe Analytics -->
+<!-- End Adobe Analytics -->
+
+
+<script type="text/javascript">
+function closeModalFull() {
+	document.location.href = 'https://silver.arm.com/';
+}
+function onLoad() {
+	$('body').prepend('<div id="modalFrame"><div onclick="closeModalFull();" title="Close Window" class="modalCloseWindow"></div><div class="modalTop"><span class="modalTopCorner"></span><div id="modalGraphic"><h2>登录</h2></div></div><div class="modalCenter"><div class="modalLeft"><div class="modalContainer"><iframe id="modalContentFrame" frameborder="0" src="https://login.arm.com/login.php?cams_login_config=http&cams_original_url=https%3A%2F%2Fsilver.arm.com%2Fdownload%2Fdownload.tm%3Fpv%3D1400906&cams_security_domain=system&mode=modal" allowtransparency="allow"></iframe></div></div></div><div class="modalBtm"><span class="modalBtmCorner"></span></div></div><div id="jsWrapper" style="position:fixed; width:100%; height:100%; top:0; left:0; border:0; margin:0; padding:0;"><iframe id="modalBackground" name="modalBackground" style="width:100%; height:100%; top:0; left:0; border:0; margin:0; padding:0;" src="https://silver.arm.com/" allowtransparency="allow"></iframe><div id="fade"></div>'); 
+  
+	$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer 
+	$('#modalFrame').fadeIn('slow'); //Fade in modal 
+}
+</script></head><body id="body" onLoad="onLoad();"><noscript>
+<div class="noJsWrapper">
+
+
+<!--googleoff: index-->
+<div id="container">
+    <div id="topheadercontainer">
+        
+            <header><div id="header">
+                <div id="touchpane" onclick="void(0);">
+                    <script type="text/javascript">
+                    var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
+                    if(isMobile){
+                    // begin touchpane script, targets iPad users allowing them to close dropdown menus by touching anywhere else on the page
+                          var tp = document.getElementById("touchpane");
+                          tp.addEventListener('touchstart', function(e){
+                              e.preventDefault();// to stop copy and paste
+                              console.log("touchstart " + e.touches.length );
+                          }, false)
+                          tp.addEventListener('touchend', function(e){
+                              console.log("touchend " + e.touches.length );
+                                              // not called when last finger removed?
+                          }, false)
+                          tp.addEventListener('touchcancel', function(e){
+                              console.log("touchcancel");
+                          }, false)
+                    // end touchpane script
+                    // begin script to support nav menu dropdown panes for touch devices
+                        var clicks = 0;
+                        $('#menu li.touchable > a').live('click', function(e) {
+                            clicks++;
+                            if (clicks === 1){
+                                e.preventDefault();
+                            } else {
+                                window.location = $(this).attr('href');
+                            }
+                        });
+                    // end nav menu for touch devices script
+                    }
+                    </script>
+                    <a href="http://www.arm.com/zh/index.php" id="logo"><img src="/images/site/arm_logo.gif" alt="ARM" id="ARM_logo"></a>
+                    <!--<div id="tagline">The Architecture for the Digital World<sup>&reg;</sup></div>-->
+                    <div id="tagline"><img src="/images/site/Architecture_tag_black.gif" width="341" height="24" alt=""></div>
+                 </div><!-- end touchpane -->            
+                 <div id="contactMenu">
+                     
+                     <ul id="language">
+                         <li>
+                            <a href='http://www.arm.com/zh/contact-us/' title='联系 ARM' class='pipe'>联系 ARM</a>
+                         </li>
+                           
+                             <li class="language"><a href="https://login.arm.com/language.php?language=zh" title="Chinese" id="Chinese" >中文<span class="langArrow">&nbsp;</span></a>
+                                 <div class="dropdown">
+                                     <ul>   
+                                        <li><a href="https://login.arm.com/language.php?language=en" title="English" id="English">English</a></li>    
+                                        <li><a href="https://login.arm.com/language.php?language=ja" title="Japanese" id="Japanese">日本語</a></li>
+                                     </ul>
+                        
+                                </div><!-- end dropdown -->
+                              </li>
+ 
+                      </ul>
+                                             
+                          <div id="loginMenu">   
+        
+        <div class="userMenu">
+
+
+            <a id="loginanchor" class="pipe" onclick="return showModal('https://login.arm.com/login.php?cams_original_url=https%3A%2F%2Fsilver.arm.com%2Fdownload%2Fdownload.tm%3Fpv%3D1400906&mode=modal');" href="https://login.arm.com/login.php?cams_original_url=https%3A%2F%2Fsilver.arm.com%2Fdownload%2Fdownload.tm%3Fpv%3D1400906">登录</a>                  
+            <a class="pipe" href="https://login.arm.com/register.php">注册</a>
+
+            <a href="http://www.arm.com/zh/help-navigating.php">帮助</a>
+                    <!--/div-->
+    </div>
+</div>
+                        
+                          
+   
+                </div><!-- end contactMenu -->
+    <nav><div id="menu">
+      <ul>
+
+
+<li class="first touchable">
+
+
+    <a href="http://www.arm.com/zh/products/index.php" id="产品">产品</a>
+    <div class="dropdown_3columns">
+        <div class="col_1">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/products/processors/index.php">处理器</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/cortex-a50/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Cortex-A50 系列</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/cortex-a/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Cortex-A 系列</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/cortex-r/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Cortex-R 系列</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/cortex-m/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Cortex-M 系列</a>
+
+</li>
+ 
+
+            <li class="more"><a href="http://www.arm.com/zh/products/processors/index.php">More Processors</a></li>
+        
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/products/multimedia/index.php">多媒体</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/multimedia/mali-mid-range-graphics/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Mali Mid-Range 图形</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/multimedia/mali-high-end-graphics/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Mali High-End 图形</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/multimedia/mali-video/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Mali Video</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/multimedia/mali-technologies/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Mali Technologies</a>
+
+</li>
+ 
+
+            <li class="more"><a href="http://www.arm.com/zh/products/multimedia/index.php">More Multimedia</a></li>
+        
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/products/physical-ip/index.php">物理 IP</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/physical-ip/logic-ip/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">逻辑 IP</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/physical-ip/embedded-memory-ip/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">嵌入式内存 IP</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/physical-ip/interface-ip/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">接口 IP</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/physical-ip/processor-optimization-pack/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">POP&amp;trade; IP</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>
+        <div class="col_1 middle">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/products/tools/index.php">工具</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/tools/software-tools/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">软件工具</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/tools/development-boards/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">开发板</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/tools/debug-adapters/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">调试适配器</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/tools/models/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">模型</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/products/security-on-arm/index.php">Security on ARM</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/technologies/trustzone/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">TrustZone Technology</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/technologies/trustzone/tee-smc.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Secure OS &amp; TEE</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/security-on-arm/trustzone-ready/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Secure SoC Architecture</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/processors/securcore/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">SecurCore</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/products/system-ip/index.php">系统 IP</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/system-ip/amba/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">CoreLink 和 AMBA</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/system-ip/interconnect/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">互连</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/system-ip/memory-controllers/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">内存控制器</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/system-ip/coresight/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">CoreSight</a>
+
+</li>
+ 
+
+            <li class="more"><a href="http://www.arm.com/zh/products/system-ip/index.php">More System IP</a></li>
+        
+    </ul>
+
+</li>
+            </ul>
+        </div>    
+    
+        <div class="col_1">
+
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/products/buying-guide/index.php">购买指南</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/buying-guide/licensing/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">ARM IP 许可</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/buying-guide/processor-foundry-programs.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">处理器代工厂计划</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/buying-guide/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">工具</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/buying-guide/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">合作伙伴标准部件</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+
+            
+            
+ <ARMREGION match="NA,SA,EMEA,APAC">
+<div id="prodDS">
+   <a href="http://www.arm.com/zh/products/designstart/index.php" title="DesignStart"><img src="/images/site/designstart_graphic.png" alt=""></a>
+</div>
+</ARMREGION>
+
+<ARMREGION match="">
+<div id="prodInfo">
+    <form action="http://www.arm.com/contact-us/contact.php?action=step2&amp;qid=8" method="post">
+        <button value="请求更多信息" name="Request Product Info" type="submit" class="reqInfoBtn"><span>请求更多信息</span></button>
+    </form>
+</div>
+</ARMREGION>
+
+        </div>
+    
+    
+
+        <aside><div class="menuBtm">
+    
+            <div class="colLeft">
+                
+                <ARMREGIONRANDOM><ARMREGION match="APAC">
+    <div class="productsContainerLeft">
+    
+        <img src="/images/menus/pane_product_ds-5.jpg" class="img_left" alt=""/> 
+        <h5><a href="http://www.arm.com/zh/products/tools/software-tools/ds-5/index.php">ARM&reg;  Development Studio 5 (DS-5™) </a></h5>
+        <p>ARM&reg;  DS-5™ is an integrated development environment for delivering optimized and robust software for ARM processors.  <a href="http://www.arm.com/zh/products/tools/software-tools/ds-5/index.php">Read More...</a></p>
+    </div>
+</ARMREGION>
+<!-- ARMREGION match="SA,EMEA,">
+    <div class="productsContainerLeft">
+    
+        <img src="/images/menus/pane_product_cortex_A8.png" class="img_left" alt=""/> 
+        <h5><a href="http://www.arm.com/zh/products/processors/cortex-a/cortex-a8.php">ARM&reg;  Cortex-A8  Processor </a></h5>
+        <p>The ARM&reg;  Cortex-A8 processor is a proven high-performance solution in end devices with millions of units shipped annually.  <a href="http://www.arm.com/zh/products/processors/cortex-a/cortex-a8.php">Read More...</a></p>
+    </div>
+</ARMREGION -->
+<!-- ARMREGION match="NA,">
+    <div class="productsContainerLeft">
+    
+        <img src="/images/menus/pane_product_processor_selector.jpg" class="img_left" alt=""/> 
+        <h5><a href="http://www.arm.com/zh/products/processors/selector.php">ARM&reg; Processor Selector </a></h5>
+        <p>Find the correct processor quickly and accurately with ARM’s interactive and easy to use Processor Selector.  <a href="http://www.arm.com/zh/products/processors/selector.php">Read More...</a></p>
+    </div>
+</ARMREGION -->
+</ARMREGIONRANDOM>
+            </div>
+            <div class="colRight">
+                
+                <ARMREGIONRANDOM><ARMREGION match="NA,SA,EMEA,APAC">
+    <div class="productsContainerRight">
+    
+        <img src="/images/menus/Nav-Panel-Promo-bigLittle.gif" class="img_left" alt=""/> 
+        <h5><a href="http://www.arm.com/zh/products/processors/technologies/biglittleprocessing.php">ARM big.LITTLE processing</a></h5>
+        <p>big.LITTLE technology redefines low power and moves the goalposts for low power design to an even lower level. <a href="http://www.arm.com/zh/products/processors/technologies/biglittleprocessing.php">Read More</a></p>
+    </div>
+</ARMREGION>
+<!-- ARMREGION match="EMEA,">
+    <div class="productsContainerRight">
+    
+        <img src="/images/menus/pane_product_mali-678.png" class="img_left" alt=""/> 
+        <h5><a href="http://www.arm.com/zh/products/multimedia/mali-high-end-graphics/mali-t678.php">ARM&reg; Mali™-T678 Graphical Processing Unit </a></h5>
+        <p>The ARM&reg; Mali™-T678 GPU is the latest addition based on the Midgard architecture and builds on proven technology leadership.  <a href="http://www.arm.com/zh/products/multimedia/mali-high-end-graphics/mali-t678.php">Read More...</a></p>
+    </div>
+</ARMREGION -->
+<!-- ARMREGION match="NA,SA,APAC">
+    <div class="productsContainerRight">
+    
+        <img src="/images/menus/pane_product_cortex_a9.jpg" class="img_left" alt=""/> 
+        <h5><a href="http://www.arm.com/zh/products/processors/cortex-a/cortex-a9.php">ARM&reg;  Cortex-A9  Processor </a></h5>
+        <p>The ARM&reg;  Cortex-A9 processor delivers exceptional performance with less power than high performance computer platforms. <a href="http://www.arm.com/zh/products/processors/cortex-a/cortex-a9.php">Read More...</a></p>
+    </div>
+</ARMREGION -->
+</ARMREGIONRANDOM>
+            </div>
+    
+        </div></aside> 
+</div>
+</li>
+ 
+ 
+
+<li class=" touchable">
+
+
+    <a href="http://www.arm.com/zh/support/index.php" id="支持">支持</a>
+    <div class="dropdown_2columns">
+        <div class="col_2">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/support/contact-support.php">Contact Support</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="https://silver.arm.com/support/preload.tsh?wm=fb" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Open a Support Case</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="https://silver.arm.com/">资源</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://infocenter.arm.com/help/index.jsp" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Documentation</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.set.appnotes/index.html" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Application Notes and Tutorials</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/support/resources/arm-books/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">ARM 相关书目</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="https://silver.arm.com/browse/" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Downloads</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://forums.arm.com/" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Forums</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://infocenter.arm.com/help/topic/com.arm.doc.faqs/" onclick="javascript:pageTracker._trackPageview(this.href);" target="">FAQs and Knowledge Articles</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="https://silver.arm.com/licensing/" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Software Licenses </a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/products/designstart/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">DesignStart</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>
+        <div class="col_2 last">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/support/training/index.php">Training</a>
+
+</li><li>
+    <a href="http://www.arm.com/zh/support/support-maintenance.php">Support and Maintenance</a>
+
+</li><li>
+    <a href="http://www.arm.com/zh/support/active-assist.php">Active Assist</a>
+
+</li><li>
+    <a href="http://www.arm.com/zh/support/arm-accredited-engineer-program/index.php">ARM Accredited Engineer Program</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/support/arm-accredited-engineer-program/accreditations/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Accreditations</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/support/arm-accredited-engineer-program/training-providers/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Training Providers</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/support/arm-accredited-engineer-program/corporate-membership.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Corporate Membership</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/support/university/index.php">大学计划</a>
+
+</li>
+            </ul>
+        </div>    
+    
+    
+
+        <aside><div class="menuBtm">
+    
+            <ARMREGIONRANDOM>
+ <ARMREGION match="">
+    <a href="http://www.arm.com/support/arm-accredited-engineer/index.php"><img src="/images/menus/support_pane_AAE.gif" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION>
+ </ARMREGIONRANDOM>
+    
+        </div></aside> 
+</div>
+</li>
+ 
+ 
+
+<li class=" touchable">
+
+
+    <a href="http://www.arm.com/zh/community/index.php" id="社区">社区</a>
+    <div class="dropdown_3columns">
+        <div class="col_1">
+
+            <ul class="sub">
+                <li>
+    <a href="http://community.arm.com">ARM Connected Community</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/groups/embedded" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Embedded</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/groups/arm-mali-graphics" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Multimedia</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/groups/soc-implementation" onclick="javascript:pageTracker._trackPageview(this.href);" target="">SoC Implementation</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/groups/processors" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Software Enablement</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/groups/smart-and-connected" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Smart Connected Devices</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/content?filterID=all~objecttype~objecttype%5Bblogpost%5D" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Community Blogs</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/content?filterID=all~objecttype~objecttype%5Bthread%5D" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Community Discussions</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/community/arm-partner-directory" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Find an ARM Partner</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>
+        <div class="col_1 middle">
+
+            <ul class="sub">
+                <li>
+    <a href="http://community.arm.com">ARM Connected Community</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/get-started" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Get Started</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/docs/DOC-1222" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Take the Tour</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/community/ask-a-question" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Ask a Question</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://community.arm.com/docs/DOC-2041" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Featured Videos</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/community/social-media.php">Social Media</a>
+
+</li><li>
+    <a href="https://login.arm.com/userprofile.php?tab=Subscriptions">邮件列表订阅</a>
+
+</li><li>
+    <a href="http://www.arm.com/zh/rss.php">RSS Updates</a>
+
+</li>
+            </ul>
+        </div>    
+    
+        <div class="col_1">
+
+
+            
+            
+        </div>
+    
+    
+
+        <aside><div class="menuBtm">
+    
+            <div class="colLeft">
+                
+                <ARMREGIONRANDOM>
+ <ARMREGION match="NA,SA,EMEA,APAC">
+    <a href="http://community.arm.com"><img src="/images/menus/pane_community_cc.jpg" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION>
+ </ARMREGIONRANDOM>
+            </div>
+            <div class="colRight">
+                
+                <ARMREGIONRANDOM></ARMREGIONRANDOM>
+            </div>
+    
+        </div></aside> 
+</div>
+</li>
+ 
+ 
+
+<li class=" touchable">
+
+
+    <a href="http://www.arm.com/zh/markets/index.php" id="市场">市场</a>
+    <div class="dropdown_2columns">
+        <div class="col_2">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/markets/embedded/index.php">嵌入式</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/automotive-infotainment.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">汽车信息娱乐</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/embedded-computing.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">嵌入式计算</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/mcu.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">通用 MCU</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/internet-of-things-iot.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Internet of Things (IoT)</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/smart-cards.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">智能卡</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/smart-meter.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">智能仪表</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/embedded/under-the-hood-automotive.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Under the Hood Automotive</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/markets/mobile/index.php">移动</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/mobile/computing.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">计算</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/mobile/smartphones.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">智能手机</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/mobile/feature-phones.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">功能手机</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/mobile/connectivity-modem.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">连接和调制解调器</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/mobile/trustzone-and-mobile-payments.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">移动支付</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>
+        <div class="col_2 last">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/markets/home/index.php">家庭</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/home/blu-ray-and-dvd.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">蓝光和 DVD</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/home/computing-all-in-ones-nettops.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">计算</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/home/digital-set-top-box.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">数字机顶盒</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/home/digital-still-cameras.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">静态数码相机</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/home/digital-tv.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">数字电视</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/home/gaming.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">游戏</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/markets/enterprise/index.php">企业</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/enterprise/hdd-ssd.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">HDD/SSD</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/enterprise/flash-cards-and-universal-flash-devices.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">闪存卡和 UFD </a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/enterprise/home-networking.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">家庭网络</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/markets/enterprise/network-infrastructure.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Network Infrastructure</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/markets/arm-powered-product-search/index.php">ARM Powered 产品</a>
+
+</li>
+            </ul>
+        </div>    
+    
+    
+
+        <aside><div class="menuBtm">
+    
+            <ARMREGIONRANDOM><ARMREGION match="EMEA,">
+    <div class="marketsContainer">
+    
+        <div class="marketsPost">
+            <h5>ARM Powered Products</h5>
+            <p class="prodName"><a href="http://www.arm.com/markets/home/cstick-cotton-candy.php">Cstick Cotton Candy</a></p>
+            <p>Cstick Cotton Candy is a compute device that gives users a familiar computing experience with a single, secure point of access to cloud services and apps. Specs include the ARM&reg; Cortex™-A9 CPU and ARM Mali™-400 MP GPU.</p>
+            <p><a href="http://www.arm.com/markets/home/cstick-cotton-candy.php">More about the Cstick Cotton Candy</a></p>
+            <div id="appImage">
+                <img src="/images/armpp/cstick-cotton-candy-markets-pane.jpg"/>
+            </div> 
+       </div>
+    </div> 
+</ARMREGION>
+<!-- ARMREGION match="APAC">
+    <div class="marketsContainer">
+    
+        <div class="marketsPost">
+            <h5>ARM Powered Products</h5>
+            <p class="prodName"><a href="http://www.arm.com/markets/home/hisense-smart-tv-xt880-series.php">Hisense XT880 series of SmartTVs</a></p>
+            <p>The Hisense XT880 series of SmartTVs deliver an immersive 2D or 3D viewing experience at a great price. Powered by the ARM&reg; Cortex™-A9 CPU and ARM Mali™-400 MP GPU, this product offers a variety of innovative features.</p>
+            <p><a href="http://www.arm.com/markets/home/hisense-smart-tv-xt880-series.php">More about the Hisense XT880 series of SmartTVs</a></p>
+            <div id="appImage">
+                <img src="/images/armpp/hisense-smartTV-markets-pane.jpg"/>
+            </div> 
+       </div>
+    </div> 
+</ARMREGION -->
+<!-- ARMREGION match="SA,">
+    <div class="marketsContainer">
+    
+        <div class="marketsPost">
+            <h5>ARM Powered Products</h5>
+            <p class="prodName"><a href="http://www.arm.com/markets/mobile/samsung-galaxy-s4.php">Samsung Galaxy S4</a></p>
+            <p>The Samsung Galaxy S4 smartphone powerhouse boasts a Quad 1.8 GHz ARM&reg; Cortex™-A15 processor core plus Quad 1.2 GHz ARM Cortex-A7 processor core, ARM big.LITTLE architecture, ARM TrustZone, and an ARM NEON SIMD engine.</p>
+            <p><a href="http://www.arm.com/markets/mobile/samsung-galaxy-s4.php">More about the Samsung Galaxy S4</a></p>
+            <div id="appImage">
+                <img src="/images/armpp/samsung-galaxy-s4-markets-pane.jpg"/>
+            </div> 
+       </div>
+    </div> 
+</ARMREGION -->
+<!-- ARMREGION match="NA,">
+    <div class="marketsContainer">
+    
+        <div class="marketsPost">
+            <h5>ARM Powered Products</h5>
+            <p class="prodName"><a href="http://www.arm.com/markets/embedded/fitbit-one.php">Fitbit One</a></p>
+            <p>The Fitbit One, powered by the ARM&reg; Cortex™-M3 CPU, is a wireless activity and sleep tracker that monitors calories burned, distance traveled, steps taken, stairs climbed and sleep quality. Wirelessly syncs to devices.</p>
+            <p><a href="http://www.arm.com/markets/embedded/fitbit-one.php">More about the Fitbit One</a></p>
+            <div id="appImage">
+                <img src="/images/armpp/fitbit-one-markets-pane.jpg"/>
+            </div> 
+       </div>
+    </div> 
+</ARMREGION -->
+</ARMREGIONRANDOM>
+    
+        </div></aside> 
+</div>
+</li>
+ 
+ 
+
+<li class=" touchable">
+
+
+    <a href="http://www.arm.com/zh/about/index.php" id="关于">关于</a>
+    <div class="dropdown_2columns">
+        <div class="col_2">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/about/company-profile/index.php">公司简介</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/company-profile/corporate-responsibility/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Corporate Responsibility</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/company-profile/milestones.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">里程碑</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-execCommittee" onclick="javascript:pageTracker._trackPageview(this.href);" target="">高级管理团队</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-govboard" onclick="javascript:pageTracker._trackPageview(this.href);" target="">董事会</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/company-profile/quality-policy.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">质量政策</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/locations-around-the-world.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">ARM 办事处</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://ir.arm.com/">投资者</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-homeprofile" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Company Overview</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-irhome" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Investor Information</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-stockquotechart" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Share Performance</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-reportsannual" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Annual Reports</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://ir.arm.com/phoenix.zhtml?c=197211&p=irol-reportsother" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Results Center</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>
+        <div class="col_2 last">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/about/trademarks/index.php">Trademarks</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/trademarks/arm-trademark-list/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Trademark List</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/trademarks/guidelines/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Guidelines</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/trademarks/enquiry-form.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Trademark Enquiry Form</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/trademarks/limited-use-of-arm-corporate-logo.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Corporate Logo</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/about/newsroom/index.php">新闻中心</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/newsroom/news-2013.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">新闻发布</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/newsroom/partner-news.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">合作伙伴新闻</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/newsroom/media-resources/index.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">媒体资源</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/about/events/index.php">活动</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/events/live-events.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">行业活动</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/about/events/online-events.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Online Events</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>    
+    
+    
+
+        <aside><div class="menuBtm">
+    
+            <ARMREGIONRANDOM>
+ <ARMREGION match="">
+    <a href="http://www.arm.com/files/pdf/Shared_Purpose.pdf"><img src="/images/menus/shared_purpose_banner_v2.png" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION>
+ </ARMREGIONRANDOM>
+    
+        </div></aside> 
+</div>
+</li>
+ 
+ 
+
+<li class=" touchable">
+
+
+    <a href="http://www.arm.com/zh/careers/index.php" id="职业发展">职业发展</a>
+    <div class="dropdown_2columns align_right">
+        <div class="col_2">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/careers/how-to-join-arm/index.php">How to Join the ARM Team</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://careers.peopleclick.com/careerscp/client_arm/external/search.do?functionName=getSearchCriteria" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Job Search</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/how-to-join-arm/intern.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Intern Opportunities</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/how-to-join-arm/graduate.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Graduate Opportunities</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/how-to-join-arm/experienced.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Experienced Opportunities</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/how-to-join-arm/26999.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Recruitment Events</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://careers.peopleclick.com/careerscp/client_arm/external/registration.do?functionName=getRegistrationPage" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Candidate Profile</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/how-to-join-arm/faqs.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">FAQs</a>
+
+</li>
+ 
+
+    </ul>
+
+</li><li>
+    <a href="http://www.arm.com/zh/careers/connect-interact-share/index.php">Connect, Interact &amp; Share</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="https://twitter.com/ARMJobs" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Follow us on Twitter</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="https://www.facebook.com/ARMfans" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Follow us on Facebook</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.linkedin.com/company/arm" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Join us on LinkedIn</a>
+
+</li>
+ 
+
+            <li class="more"></li>
+        
+    </ul>
+
+</li>
+            </ul>
+        </div>
+        <div class="col_2 last">
+
+            <ul class="sub">
+                <li>
+    <a href="http://www.arm.com/zh/careers/life-at-arm/index.php">Life at ARM</a>
+
+    <ul>        
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/compensation-and-benefits.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Compensation &amp; Benefits</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/career-paths.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Career Paths</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/student-center.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Student Center</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/workforce-diversity.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Workforce Diversity</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/culture-and-values.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Culture &amp; Values</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/locations-around-the-world.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Our Locations Around the World</a>
+
+</li>
+ 
+
+
+<li>
+
+
+
+
+    <a href="http://www.arm.com/zh/careers/life-at-arm/office-holidays-around-the-world.php" onclick="javascript:pageTracker._trackPageview(this.href);" target="">Office Holidays Around the World</a>
+
+</li>
+ 
+
+    </ul>
+
+</li>
+            </ul>
+        </div>    
+    
+    
+
+        <aside><div class="menuBtm">
+    
+            <ARMREGIONRANDOM>
+ <ARMREGION match="NA,">
+    <a href="/zh/careers/how-to-join-arm/graduate.php"><img src="/images/menus/pane_about_graduate_1.jpg" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION>
+ 
+ <!-- ARMREGION match="SA,">
+    <a href="/zh/careers/how-to-join-arm/graduate.php"><img src="/images/menus/pane_about_graduate_2.jpg" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION -->
+ 
+ <!-- ARMREGION match="EMEA,">
+    <a href="/zh/careers/how-to-join-arm/graduate.php"><img src="/images/menus/pane_about_graduate_3.jpg" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION -->
+ 
+ <!-- ARMREGION match="APAC">
+    <a href="/zh/careers/how-to-join-arm/graduate.php"><img src="/images/menus/pane_about_graduate_4.jpg" id="geoBanner" class="center" alt=""/></a>
+ </ARMREGION -->
+ </ARMREGIONRANDOM>
+    
+        </div></aside> 
+</div>
+</li>
+ 
+ 
+      </ul>
+    </div></nav>
+    <div id="search">
+
+
+  <form action="http://search.arm.com/search" method="get">
+        <ul id="searchFilter">
+          <li class="filterBtn" title="search filter" onclick="return true">
+            <div class="searchDropdown">
+              <fieldset>
+                <legend> </legend>
+                <ul>
+                  <li>
+                    <input id="fullSiteSearch" name="site" type="radio" checked value="Chinese" >
+                    <label for="fullSiteSearch">全面网站搜索</label>
+                  </li>
+                  <li>
+                    <input id="multimedia" name="site" type="radio" value="Multimedia">
+                    <label for="multimedia">多媒体</label>
+                  </li>
+                  <li>
+                    <input id="supportSearch" name="site" type="radio" value="Support">
+                    <label for="supportSearch">支持</label>
+                  </li>
+                  <li>
+                    <input id="partnerProducts" name="site" type="radio" value="ARMPP">
+                    <label for="partnerProducts">合作伙伴产品</label>
+                  </li>
+                  <li>
+                    <input id="investorRelations" name="site" type="radio" value="InvestorRelations">
+                    <label for="investorRelations">投资者关系</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div><!-- end searchDropdown --> 
+          </li>
+        </ul><!-- end searchFilter -->
+            <input name="entqr" value="0" type="hidden">
+            <input name="output" value="xml_no_dtd" type="hidden">
+                     <input name="sort" value="date:D:L:d1" type="hidden">
+                     <input name="client" value="ARM_Site_Refresh" type="hidden">
+                     <input name="ud" value="1" type="hidden">
+                     <input name="oe" value="UTF-8" type="hidden">
+                     <input name="ie" value="UTF-8" type="hidden">
+                     <input name="getfields" value="Description" type="hidden">
+                     <input name="proxystylesheet" value="ARM_Site_Refresh" type="hidden">
+        <input class="inset placeholder" autocomplete="off" id="" type="search" name="q" maxLength=255 placeholder="搜索我们的网站" title="搜索框" onclick="if(this.value=='搜索我们的网站'){this.value = '';}">
+        <input type="submit" class="magBtn" title="search" value="">
+      </form>
+    </div><!-- end search -->    
+    <div id="breadcrumbs">
+    <span>您现在的位置:</span>
+    <ul>
+    <li class="first"><a href="/zh/index.php" title="home"></a></li>
+        <!-- output php variable with breadcrumb string from parent page --> 
+        
+        <ARMBREADCRUMB />
+        
+     </ul>
+    </div><!-- end breadcrumbs -->
+    <div id="socialMedia">
+        <ul id="socialMediaIcons">
+        
+        <li id="navFacebook"><a href="http://facebook.com/ARMFans" title="ARM on Facebook">&nbsp;</a></li>
+        
+        <li id="navGoogle"><a href="https://plus.google.com/u/0/108065586321333973698/posts" title="ARM on Google+">&nbsp;</a></li>
+        <li id="navSina"><a href="http://weibo.com/2216786767" title="ARM on Weibo">&nbsp;</a></li>
+        <li id="navYouKu"><a href="http://u.youku.com/user_show/id_UMzUxNTc1NzMy.html" title="ARM on YouKu">&nbsp;</a></li>
+    </ul>
+    </div><!-- end socialMedia -->
+    </div><!-- end header -->
+  </header>
+<!--/div-->
+ <!--googleon: index-->
+ <div>
+&nbsp;
+</div>
+<div class="colmask threecol">
+   <div class="colmid">
+      <div class="colleft">
+         <div class="col1wrap">
+            <div class="col1">
+                
+                <div id="regContainer">
+                  <div id="leftSide"></div>
+                  <div id="regSteps">
+                    <h1 class="block">我的 ARM 登录</h1>
+                  </div>
+                  
+                  <div id="formContainer">
+                    <div class="reg_t">
+                      <div class="reg_b">
+                        <div class="reg_l">
+                          <div class="reg_r">
+                            <div class="reg_bl">
+                              <div class="reg_br">
+                                <div class="reg_tl">
+                                  <div class="reg_tr"> 
+                                    
+                                    <div id="formContent">
+									<div id="valid"><p>您已经到达本网站的受控部分。</p>
+<p>如果您是 ARM 注册用户，请在下面登录。如果您忘记了密码，
+请使用“忘记密码”链接重置您的密码。</p><p>如果您不是 ARM 注册用户，
+请使用“注册 ARM 帐户”链接进行注册。
+注册是免费和全自动的；您只需要提供有效的电子邮件地址即可开始。
+所有电子邮件通信都是“选择性加入”，因此不必担心收到任何垃圾电子邮件。</p></div><h3>登录</h3>									  <form accept-charset="UTF-8" name="camsLoginForm" method="post" action="/cams/login">
+                                      <div id="formLogin">
+                                            <label for="username">用户名:</label>
+                                            <input type="text" id="cams_cb_username" name="cams_cb_username"autocomplete="off" value="" />
+                                            <br />
+                                            <label for="password">密码:</label>
+                                            <input type="password" id="cams_cb_password" name="cams_cb_password" autocomplete="off" />
+                                            <br />
+											<input type="hidden" name="cams_security_domain" value="system" />
+											<input type="hidden" name="cams_login_config" value="http" />
+											<input type="hidden" name="cams_original_url" value="/postlogin.php?armurl=https%3A%2F%2Fsilver.arm.com%2Fdownload%2Fdownload.tm%3Fpv%3D1400906" />
+                                            <p class="formLinks"><a href="recoverpassword.php">忘记密码</a> | <a href="register.php">注册 ARM 帐户</a></p>
+                                      </div>
+                                      <div id="btnContainer">
+										<button value="Clear" class="btn" type="reset"><span>Clear</span></button> &nbsp; 
+										<button type="submit" name="submit" value="Login" class="btn"><span>登录</span></button>
+                                      </div>
+                                      </form>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end formContainer -->
+                  <div id="rightSide"></div>
+                </div><!-- end regContainer --> 			   
+            </div>
+		 </div>
+		 <div class="col2">
+            
+<div class="leftnav">
+   <div class="sideboxhead">
+      <span class="titlearrow">&#187;&nbsp;</span>
+      <h2>我的 ARM</h2>
+   </div>
+   <dl class="lnav">
+   
+<dt class='notselected'><img src='/images/site/n-none.gif' class='nav' alt='*' /><a href='/register.php' title='注册'>注册</a></dt><dt class='notselected'><img src='/images/site/n-none.gif' class='nav' alt='*' /><a href='/recoverpassword.php' title='忘记密码'>忘记密码</a></dt>
+   </dl>
+</div>
+            <br /><br />
+		 </div>
+	  </div>
+   </div>
+</div>
+<p>&nbsp;</p>
+
+<!-- Start Footer Area -->  
+<ARMNOTHOME><div class="clear"></div></ARMNOTHOME>
+      
+<div id="footerSlideContainer">
+<!-- End Footer Area -->
+    <div id="footerSlideButton"></div>
+    <div id="footerSlideContent"> 
+
+      <div id="footerSlideText">
+        
+<!-- Start Footer Sitemap Area -->
+<!--div class="footer_sitemap_hr"><img src="/images/site/0.png " alt="" height="1px" border="0"><hr class="footer_sitemap"></div>
+<div class="clear"></div-->
+<!--div class="footer_sitemap"-->
+<div class="footerSliderText">
+    <!--div class="footer_sitemapsection_pad"--> 
+   <!--div class="footer_sitemapsection"><img src="/images/site/0.png " alt="" height="1px" border="0"></div -->
+    <div class="footer_sitemapsection">
+        <div class="footer_sitemapsection_title"><a class="footer_sitemap" href="http://www.arm.com/zh/about/index.php">关于 ARM</a></div>
+<img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/about/company-profile/index.php">公司简介</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/about/careers/index.php">职业发展</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://ir.arm.com">投资者</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/about/newsroom/index.php">新闻中心</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/about/offices/index.php">我们的办事处</a><br>
+    </div>
+    <div class="footer_sitemapsection">
+        <div class="footer_sitemapsection_title"><a class="footer_sitemap" href="http://www.arm.com/zh/products/index.php">产品</a></div>
+<img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/products/processors/index.php">处理器</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/products/system-ip/index.php">系统 IP</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/products/physical-ip/index.php">物理 IP</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/products/multimedia/index.php">多媒体</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/products/tools/index.php">工具</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/products/secure-services/index.php">Secure Services</a><br>
+    </div>
+    <div class="footer_sitemapsection">
+        <div class="footer_sitemapsection_title"><a class="footer_sitemap" href="http://www.arm.com/zh/support/index.php">支持</a></div>
+<img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://infocenter.arm.com/help/index.jsp">文档</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://silver.arm.com/browse/">下载</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://silver.arm.com/support/">支持请求</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://forums.arm.com/">Forums</a><br>
+    </div>
+    <div class="footer_sitemapsection">
+        <div class="footer_sitemapsection_title"><a class="footer_sitemap" href="https://login.arm.com/userprofile.php">我的 ARM</a></div>
+<img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://login.arm.com/login.php">登录</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://login.arm.com/register.php">注册</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://silver.arm.com/browse/contracts.tm">订单历史记录</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://login.arm.com/userprofile.php">用户档案</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/contact-us/mailinglist.php">电子邮件更新</a><br>
+    </div>
+    <div class="footer_sitemapsection">
+        <div class="footer_sitemapsection_title"><a class="footer_sitemap" href="#">我们的其他网站</a></div>
+<img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="https://silver.arm.com/">客户门户</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.arm.com/zh/products/designstart/index.php">DesignStart</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.keil.com">Keil 工具</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.signummagazine.com/">Signum 在线</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://www.malideveloper.com/">Mali 开发人员</a><br><img alt="" border="0" src="/images/site/grayarrow.png">&nbsp;<a class="footer_sitemap" href="http://mobile.arm.com">移动 ARM</a><br>
+    </div>
+<div class="clear"></div>
+</div>
+<!-- End Footer Sitemap Area -->
+      </div><!-- end footer Slide Text --> 
+    </div><!-- end footerSlideContent --> 
+  </div><!-- end footerSlideContainer -->
+</div><!-- end topheadercontainer --><!-- this MUST be added to the page template for the video modal window to work -->
+</div><!--end container-->
+<ARMNOTHOME>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    // Javascript is working - activate footer slider
+    jQuery('#footerSlideContainer').css('position', 'absolute');
+    jQuery('#footerSlideContainer').css('height', 'auto');
+    jQuery('#footerSlideButton').css('display', 'block');
+    jQuery('#footerSlideContent').css('height', '12px');
+    jQuery('#footerSlideText').css('padding-top', '20px');
+    var expanded = false;
+    jQuery('#footerSlideButton').click(function() {
+        if (expanded === false) {
+            jQuery('#footerSlideContent').animate({ height: '175px' }); // 175 for non home
+            jQuery(this).css('background-position', 'bottom left');
+            expanded = true;
+        } else {
+            jQuery('#footerSlideContent').animate({ height: '12px' }); // 12 for non home
+            jQuery(this).css('backgroundPosition', 'top left');
+            expanded = false;
+        }
+    });
+});
+</script>
+</ARMNOTHOME>
+<!-- End Footer Area -->
+ <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+
+if((read('acceptCookie')==null) || (read('acceptCookie')=='2') || (read('acceptCookie')=='3')){
+  var pageTracker = _gat._getTracker("UA-3800502-8");
+  pageTracker._setDomainName(".arm.com");
+  pageTracker._trackPageview(location.href);
+}
+</script>
+<script type="text/javascript">
+  if((read('acceptCookie')==null) || (read('acceptCookie')=='3')){
+      var leadEmail='';
+      var encodedEmail='2f5b8472d83c5f1042f35284d969ee53b74144fc';
+      trackLead(leadEmail,encodedEmail);
+        
+  }
+function trackLead(leadEmail,encodedEmail){
+ $.ajax({
+    url: '//munchkin.marketo.net/munchkin.js',
+    dataType: 'script',
+        cache: true,
+    success: function() {
+    Munchkin.init('312-SAX-488');
+        if(leadEmail.length>0){
+          mktoMunchkinFunction(
+              'associateLead',
+                           {Email: leadEmail},
+                          encodedEmail);
+      }
+        
+  }
+});
+}
+</script>
+
+
+ 
+<!-- Adobe Analytics -->
+<script type="text/javascript">
+var siteid = 'ARM LOGIN';
+var server ='login.arm.com';
+var site ='login';
+var reportSuiteID ='armltdproddef';
+var internalUrlsFilter ='javascript:,www.arm.com,cmsis.arm.com,infocenter.arm.com,login.arm.com,silver.arm.com,search.arm.com';
+if((siteid.length>0) && (server.length>0) && (site.length>0) && (reportSuiteID.length>0) && (internalUrlsFilter.length>0)){
+  var adobeAnalytics = new AdobeAnalytics(siteid, server, site, reportSuiteID, internalUrlsFilter);
+}
+</script>                
+<!-- End Adobe Analytics --><div id='pageType' class='hideAdobe'></div><div id="footer">
+      <div class="fleft">
+      	<div id="cookieStatus">
+        	<div id="strictlyNecessary" class="notSet" title="sn" ></div>
+			<div id="performanceFunctionality" class="notSet" title="pf"></div>
+			<div id="targetAdvertise" class="notSet" title="ta"></div>
+            <!-- tooltips -->           
+            <div id="sn">Strictly necessary - These cookies are essential in order to enable you to move around the website and use its features.
+				<div class="pointer"></div>
+			</div>
+            <div id="pf">Performance and functionality - These cookies collect anonymous information about how you use our websites and allow our websites to remember the choices you make.
+				<div class="pointer"></div>
+			</div>
+            <div id="ta">Targeting Cookies - These cookies allow us to track you as you visit our websites, helping us to send you emails in respect of information and products that you have shown an interest in.
+				<div class="pointer"></div>
+			</div>            
+        </div><!-- end cookieStatus -->
+			
+      		<a href="javascript:void(0);" class="customModal" >Cookie settings</a>&nbsp;|&nbsp;
+			<a href="http://www.arm.com/about/terms-conditions.php">Terms of use</a>&nbsp;|&nbsp;
+			<a href="http://www.arm.com/about/privacy.php">Privacy</a>&nbsp;|&nbsp;
+			<a href="http://www.arm.com/about/accessibility.php">Accessibility</a>
+			</div>
+      <div class="fright"><p>&copy; ARM Ltd. Copyright 2014</p></div>
+    </div><!-- end footer --> 
+
+		<div id="cookiemodule">
+      <div class="modouter">
+        <div class="modinner">
+          <h5>Cookies</h5>
+          <p>We use cookies to give you the best experience on our website. By continuing to use our site you consent to our cookies.</p>
+          <div align="center"><button id="cookieSettings">Don't show this message again</button></div>
+          <p>
+            <a href="javascript:void(0);" class="customModal">Change Settings</a>
+          </p>
+          <p>
+            <a href="http://www.arm.com/about/cookie_policy.php">Find out more about the cookies we set</a>
+          </p>
+        </div>
+      </div> 
+    </div>
+
+<div id="hiddenDivForCookieModal" style="display:none;">
+<div id="cookieSettingsModal">
+<h1>Cookie settings</h1>
+<blockquote>
+<p> We may collect and store information about your visit to our web site automatically using browser cookies (files which are sent by us to your computer) or similar devices which we can access when you visit our web site in future.
+    Please read our <a href="http://www.arm.com/about/cookie_policy.php" target="_blank">Cookie Policy </a> to find out more about the cookies we use.
+</p>
+<p> You can control the cookies set by this website by using the slider below, and by saving your settings. 
+    These settings only apply to the ARM Website you are currently visiting and any changes you make will not apply to any other ARM websites.
+</p>
+<p>
+  We cannot turn off cookies which fall under the strictly necessary category, as these are essential in order to enable you to move around the website and use its features. 
+  Please read our <a href="http://www.arm.com/about/cookie_policy.php#third_party" target="_blank"> Cookie Policy </a> to find out how to control these using your browser settings.
+</p>
+<p> Third parties may also use cookies over which we have no control. 
+	These cookies are likely to be performance cookies or targeting cookies.
+	Please read our <a href="http://www.arm.com/about/cookie_policy.php#third_party" target="_blank"> Cookie Policy </a> to find out how to control these using your browser settings.
+</p>
+</blockquote>
+<h2>Select your cookie setting</h2>
+	<div id="cookieSettingsCnt">
+
+        
+        <div id="horzListController">
+        <ul>
+        	<li id="cookieSet1" class="notselected">
+				<a id="cookietitle1" class="notselected" onclick="showTabs('1');" href="javascript:void(0);">
+					<div id="cookieLock1" class="inactive"><p>Strictly Necessary<br /> Cookies</p></div>
+				</a>
+			</li>
+            <li id="cookieSet2" class="notselected">
+				<a id="cookietitle2" class="" onclick="showTabs('2');" href="javascript:void(0);">
+					<div id="cookieLock2" class="inactive"><p>Performance and <br />Functionality Cookies</p></div>
+				</a>
+			</li>
+            <li id="cookieSet3" class="notselected">
+				<a id="cookietitle3" class="notselected" onclick="showTabs('3');" href="javascript:void(0);">
+					<div id="cookieLock3" class="inactive"><p>Targeting <br />Cookies</p></div>
+				</a>
+			</li>
+        </ul>
+        </div><!-- end horzListController-->
+        
+		
+		
+		
+        <div class="cookieDescCnt" id="cookieContent1" style="display:block;">
+          <div class="websiteWill">
+          <h4>The following types of cookie<br> will be set:</h4>
+          <ul class="checkmark">
+              <li>Cookie Settings</li>
+			  <li>Login Settings</li>
+			  <li>General Session Cookies</li>
+          </ul>
+          </div>
+          <div class="websiteWont">
+          <h4>The following types of cookie<br> will not be set:</h4>
+          <ul class="greycheckmark">
+						<li>Device Functionality</li>
+						<li>Editor Settings</li>
+            <li>Google Analytics</li>
+						<li>Adobe Analytics</li>
+            <li>Language Settings</li>
+            <li>Marketo Cookies</li>
+						<li>Regional Content</li>
+						<li>Search Settings</li>
+						<li>Tabbed Content </li>
+          </ul>
+          </div>
+        <!--<div align="center" class="buttonCnt"><button class="cancelSettings" >Cancel</button>&nbsp;&nbsp;<button class="saveSettings" >Save Settings</button>
+        	<p>For your new settings to take effect, this page will automatically refresh when you click "Save Settings".</p>
+        </div>-->
+        </div><!-- end content1 -->
+        
+        <div class="cookieDescCnt" id="cookieContent2" style="display:none;">
+          <div class="websiteWill">
+          <h4>The following types of cookie<br> will be set:</h4>
+          <ul class="checkmark">
+            <li>Cookie Settings</li>
+						<li>Login Settings</li>
+						<li>General Session Cookies</li>
+						<li>Device Functionality</li>
+						<li>Editor Settings</li>
+            <li>Google Analytics</li>
+						<li>Adobe Analytics</li>
+            <li>Language Settings</li>
+						<li>Regional Content</li>
+						<li>Search Settings</li>
+						<li>Tabbed Content </li>
+          </ul>
+          </div>
+          <div class="websiteWont">
+          <h4>The following types of cookie<br> will not be set:</h4>
+          <ul class="greycheckmark">
+              <li>Marketo Cookies</li>
+          </ul>
+          </div>
+        <!--<div align="center" class="buttonCnt"><button class="cancelSettings" >Cancel</button>&nbsp;&nbsp;<button class="saveSettings" >Save Settings</button>
+        	<p>For your new settings to take effect, this page will automatically refresh when you click "Save Settings".</p>
+        </div>-->
+        </div><!-- end content 2-->
+    
+        <div class="cookieDescCnt" id="cookieContent3" style="display:none;">
+          <div class="websiteWill">
+          <h4>The following types of cookie<br> will be set:</h4>
+          <ul class="checkmark">
+            <li>Cookie Settings</li>
+						<li>Login Settings</li>
+						<li>General Session Cookies</li>
+						<li>Device Functionality</li>
+						<li>Editor Settings</li>
+            <li>Google Analytics</li>
+						<li>Adobe Analytics</li>
+            <li>Language Settings</li>
+						<li>Regional Content</li>
+						<li>Search Settings</li>
+						<li>Tabbed Content </li>
+						<li>Marketo Cookies</li>
+			
+          </ul>
+          </div>
+          <div class="websiteWont">
+          <h4>The following types of cookie<br> will not be set:</h4>
+          <ul>
+              <li>NA</li>
+          </ul>
+          </div>
+        <!--<div align="center" class="buttonCnt"><button class="cancelSettings" >Cancel</button>&nbsp;&nbsp;<button class="saveSettings" >Save Settings</button>
+        	<p>For your new settings to take effect, this page will automatically refresh when you click "Save Settings".</p>
+        </div>-->
+        </div><!-- end content3 -->
+	<div align="center" class="buttonCnt"><button class="cancelSettings" onclick="cancel();">Cancel</button>&nbsp;&nbsp;<button class="saveSettings" onclick="save();" >Save Settings</button>
+        	<p>For your new settings to take effect, this page will automatically refresh when you click "Save Settings".</p>
+        </div>
+	
+	
+    </div><!-- end cookieSettingCnt-->
+</div>
+</div><!-- end cookieSettingsModal -->
+<div id="cookieLevel" class="hideAdobe"></div><script type="text/javascript">
+if((read('acceptCookie')==null) || (read('acceptCookie')=='2') || (read('acceptCookie')=='3')){
+  _satellite.pageBottom();
+}
+</script></div>
+</noscript>
+
+</body>
+</html>
